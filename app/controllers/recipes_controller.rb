@@ -21,9 +21,10 @@ class RecipesController < ApplicationController
   end 
 
   def recipe_params
+    #binding.pry
     params.require(:recipe).permit(
       :title, 
-      ingredients: [
+      ingredients_attributes: [
       :name,
       :quantity
     ])
